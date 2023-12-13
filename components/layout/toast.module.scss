@@ -1,0 +1,46 @@
+
+.toast_container {
+
+    display: flex;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    padding-bottom: 70px;
+
+    > .toast_message {
+
+        > span {
+
+            display: block;
+            
+            padding: 10px 20px;
+            border-radius: 12px;
+
+            font-weight: 400;
+            font-size: 16px;
+
+            &.success {
+                background-color: var(--success-hex);
+                color: var(--foreground-light-hex);
+            }
+
+            &.info {
+                background-color: var(--background-dark-hex);
+                color: var(--foreground-light-hex);
+            }
+
+            &.error {
+                background-color: var(--danger-hex);
+                color: var(--foreground-light-hex);
+            }
+
+            &.warning {
+                background-color: var(--warning-hex);
+                color: var(--warning-dark-hex);
+            }
+        }
+    }
+}

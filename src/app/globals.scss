@@ -1,0 +1,146 @@
+// 폰트
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url('/fonts/Pretendard-Black.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url('/fonts/Pretendard-ExtraBold.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url('/fonts/Pretendard-SemiBold.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url('/fonts/Pretendard-Medium.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url('/fonts/Pretendard-Light.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url('/fonts/Pretendard-ExtraLight.subset.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url('/fonts/Pretendard-Thin.subset.woff2') format('woff2');
+}
+
+* {
+  font-family: 'Pretendard', sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  // Colors
+  // --primary-hex: #3182f6;
+  // --primary-rgb:49,130,246;
+  --primary-hex: #1e9eff;
+  --primary-rgb: 30,158,255;
+
+  --background-white-hex: #ffffff;
+  --background-white-rgb: 255,255,255;
+  --background-grey-hex: #f5f5f5;
+  --background-grey-rgb: 245,245,245;
+  --background-grey-dark-hex: #e5e5e5;
+  --background-grey-dark-rgb: 229,229,229;
+  --background-dark-hex: #333333;
+  --background-dark-rgb: 51,51,51;
+  --background-light-hex: #f8f8f8;
+  --background-light-rgb: 248,248,248;
+  --background-lighter-hex: #fafafa;
+  --background-lighter-rgb: 250,250,250;
+
+  --foreground-dark-hex: #333333;
+  --foreground-dark-rgb: 51,51,51;
+  --foreground-hex: #666666;
+  --foreground-rgb: 102,102,102;
+  --foreground-light-hex: #ffffff;
+  --foreground-light-rgb: 255,255,255;
+  --foreground-grey-hex: #999999;
+  --foreground-grey-rgb: 153,153,153;
+  --foreground-light-grey-hex: #cccccc;
+  --foreground-light-grey-rgb: 204,204,204;
+
+  --success-light-hex: #cbf1c1;
+  --success-light-rgb: 203,241,193;
+  --success-hex: #2ecb6a;
+  --success-rgb: 46,203,106;
+  --success-dark-hex: #104c25;
+  --success-dark-rgb: 16,76,37;
+
+  --warning-light-hex: #ffe293;
+  --warning-light-rgb: 255,226,147;
+  --warning-hex: #fcc93b;
+  --warning-rgb: 252,201,59;
+  --warning-dark-hex: #4d3b0e;
+  --warning-dark-rgb: 77,59,14;
+
+  --danger-light-hex: #ffccc7;
+  --danger-light-rgb: 255,204,199;
+  --danger-hex: #ff4d4f;
+  --danger-rgb: 255,77,79;
+  --danger-dark-hex: #571317;
+  --danger-dark-rgb: 87,19,23;
+
+  --info-hex: #3182f6;
+  --info-rgb: 49,130,246;
+  --info-light-hex: #cfe0fd;
+  --info-light-rgb: 207,224,253;
+  --info-dark-hex: #0f2a5c;
+  --info-dark-rgb: 15,42,92;
+
+}
+
+main, body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  flex-grow: 1;
+  margin-left: 60px;
+  background-color: var(--background-light-hex);
+}

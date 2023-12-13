@@ -1,0 +1,140 @@
+
+.model_page {
+    padding: 40px;
+    padding-bottom: 120px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    > section {
+
+        padding: 20px;
+        padding-bottom: 40px;
+        background-color: var(--background-white-hex);
+        border-radius: 8px;
+    
+    }
+
+    > .model_list_wrapper {
+
+        width: 310px;
+        flex-shrink: 0;
+
+        > button {
+            margin-bottom: 20px;
+        }
+    }
+
+    > .model_detail_section {
+
+        padding: 20px 40px 40px;
+        width: 500px;
+        flex-shrink: 0;
+
+        > .model_detail_wrapper {
+
+            margin-bottom: 10px;
+
+            > .model_detail {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                > span {
+                    color: var(--foreground-grey-hex);
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    &.model_id {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        > button {
+            padding: 0;
+            font-size: 14px;
+            font-weight: 300;
+            border-radius: 4px;
+
+            border: 0;
+            outline: 0;
+
+            background-color: transparent;
+
+            cursor: pointer;
+
+            color: var(--foreground-grey-hex);
+
+            &:hover {
+                color: var(--danger-hex);
+            }
+        }
+    }
+
+    > .products_list_section {
+
+        flex-grow: 1;
+        padding: 20px 40px 40px;
+
+        > .selectable_product_list {
+
+            display: grid;
+            grid-template-columns: repeat(5, minmax(100px, 1fr));
+            gap: 6px;
+            // width: 100%;
+
+            > .selectable_product_card {
+
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                border-radius: 4px;
+                outline: 1px solid var(--background-grey-dark-hex);
+
+                padding: 4px;
+                padding-bottom: 16px;
+
+                background-color: var(--background-white-hex);
+
+                filter: saturate(0) brightness(0.97);
+
+                &:hover {
+                    opacity: 0.6;
+                    filter: brightness(0.97);
+                }
+
+                &.selected {
+                    opacity: 1;
+                    filter: none;
+                    outline: 1px solid #7997ab;
+                }
+
+                > img {
+                    width: 100%;
+                    border-radius: 6px;
+                    margin-bottom: 10px;
+                }
+
+                > span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    > button {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 10;
+        padding: 20px 40px;
+    }
+}
+
+span.selected {
+    color: var(--primary-hex);
+}

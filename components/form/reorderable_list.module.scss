@@ -1,0 +1,60 @@
+
+.reorderable_list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 4px;
+
+    padding: 0;
+    margin: 0;
+
+    > .reorderable_item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        background-color: var(--background-white-hex);
+        
+        padding: 8px;
+
+        border-radius: 8px;
+
+        cursor: default;
+
+        &.dragging {
+            box-shadow: 0px 6px 6px 2px rgba(0,0,0,0.05);
+            outline: 1px solid var(--background-grey-hex);
+        }
+
+        &.hovable:hover {
+            background-color: var(--background-lighter-hex);
+        }
+
+        > .handle {
+
+            opacity: 0.4;
+            margin-right: 10px;
+            cursor: pointer;
+
+            padding: 5px;
+
+            border-radius: 8px;
+
+            &:hover {
+                opacity: 1;
+                background-color: rgb(var(--background-dark-rgb), 0.06);
+            }
+        
+            > svg {
+                display: block;
+                &:focus {
+                    outline: 0;
+                    border: 0;
+                }
+                fill: var(--foreground-hex);
+            }
+
+        }
+    }
+}

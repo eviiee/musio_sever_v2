@@ -1,0 +1,73 @@
+.button {
+    padding: 16px 20px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+
+    outline: 2px solid transparent;
+    border: 0;
+    border-radius: 8px;
+    
+    width: 100%;
+
+    &.small {
+        width: auto;
+    }
+
+    cursor: pointer;
+
+    --darken: inset 0 0 100px 100px rgba(var(--background-dark-rgb), 0.05);
+    --lighten: inset 0 0 100px 100px rgba(var(--background-white-rgb), 0.05);
+
+    &.primary {
+        background-color: var(--primary-hex);
+        color: var(--foreground-light-hex);
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: var(--darken);
+        }
+    }
+
+    &.light {
+        background-color: var(--background-light-hex);
+        color: var(--foreground-dark-hex);
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: var(--darken);
+        }
+    }
+
+    &.dark {
+        background-color: var(--background-dark-hex);
+        color: var(--foreground-light-hex);
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: var(--lighten);
+        }
+    }
+
+    &.danger {
+        background-color: var(--danger-hex);
+        color: var(--foreground-light-hex);
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: var(--darken);
+        }
+    
+    }
+
+    &:disabled {
+        background-color: var(--background-grey-dark-hex);
+        color: var(--foreground-light-grey-hex);
+        cursor: default;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

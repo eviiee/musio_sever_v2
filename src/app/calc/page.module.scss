@@ -1,0 +1,215 @@
+.calcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px;
+
+    >section {
+
+        background-color: var(--background-white-hex);
+        border-radius: 8px;
+
+    }
+
+    >section.left {
+        flex-shrink: 1;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 40px 0;
+
+        >.calculator {
+
+            >.chart_wrapper {
+
+                padding-top: 30px;
+                position: relative;
+
+                >canvas {
+                    margin: auto;
+                }
+
+                >div {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -32%);
+
+                    >h2,
+                    h3 {
+                        margin: 0;
+
+                    }
+
+                    >h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                    }
+
+                    >h3 {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            >* {
+                padding: 0 40px;
+            }
+
+            >.calculatorForm {
+
+                margin: 20px 0;
+
+                >* {
+
+                    &:not(.motion_div),
+                    &.motion_div>* {
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    >section.right {
+
+        flex-grow: 1;
+        display: flex;
+
+        >div {
+
+            width: 100%;
+
+            >.table_toolbar {
+
+                padding: 20px 20px 10px 30px;
+
+                >span {
+                    flex-grow: 1;
+                }
+
+                >.buttons {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+
+                    >button:first-child {
+                        padding: 6px;
+                        border-radius: 99px;
+                        border: 0;
+                        outline: 0;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        opacity: 0.5;
+                        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                        &:hover {
+                            background-color: var(--background-grey-hex);
+                            opacity: 0.8;
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    >button:not(:first-child) {
+                        padding: 13px 22px;
+                    }
+                }
+            }
+
+            >table {
+
+                display: flex;
+                flex-direction: column;
+
+                tr {
+                    border: 0;
+                    border-bottom: 1px solid var(--foreground-light-grey-hex);
+                    display: grid;
+                    grid-template-columns: repeat(15, 1fr);
+
+                    padding-left: 30px;
+                }
+
+                th,
+                td {
+                    padding: 16px 4px;
+                    text-align: left;
+                    font-size: 14px;
+
+                    min-width: 80px;
+                }
+
+                >thead {
+                    >tr {
+                        background-color: #e9edef;
+                        border: 0;
+
+                        >th {
+                            color: var(--foreground-hex);
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                >tbody {
+
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    >tr {
+                        border-bottom: 1px solid var(--background-grey-hex);
+
+                        &:first-child {
+                            border-bottom: 0;
+                        }
+
+                        >td {
+                            >.marginIndicator {
+                                display: inline-block;
+                                width: 2px;
+                                height: 12px;
+
+                                margin-right: 4px;
+
+                                background-color: var(--info-hex);
+                                border-radius: 2px;
+
+                                transform: translateY(1px);
+
+                                &.minus {
+                                    background-color: var(--danger-hex);
+                                }
+                            }
+
+                            text-overflow: clip;
+                            overflow: hidden;
+                        }
+                    }
+
+                    >.empty_table {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        >td {
+                            font-size: 20px;
+                            font-weight: 300;
+                            color: var(--foreground-light-grey-hex);
+                        }
+
+                        padding: 40px 0;
+
+                    }
+                }
+            }
+        }
+    }
+}

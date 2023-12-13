@@ -1,0 +1,115 @@
+.toggle {
+
+    display: flex;
+
+    &.nolabel {
+        
+        --width: 20px;
+        --height: 20px;
+
+        > ol {
+            > li {
+                width: var(--width);
+                height: var(--height);
+                > button {
+                    border-radius: var(--width);
+                }
+            }
+
+            > .indicator { 
+                border-radius: var(--width);
+                background-color: var(--primary-hex);
+            }
+        }
+    }
+
+    --width : 105px;
+    --height : 35px;
+
+    > ol {
+        display: flex;
+        flex-direction: row;
+        padding: 4px;
+        margin: 0;
+
+        border-radius: 16px;
+        background-color: var(--background-grey-hex);
+
+        gap: 4px;
+
+        position: relative;
+
+        > li {
+            list-style-type: none;
+            padding: 0;
+
+            > button {
+
+                z-index: 1;
+
+                position: relative;
+                
+                width: var(--width);
+                height: var(--height);
+
+                border-radius: 12px;
+                border: 0;
+                outline: 0;
+                background-color: transparent;
+                cursor: pointer;
+
+                color: var(--foreground-grey-hex);
+                font-weight: 500;
+                font-size: 14px;
+
+                &:hover:not(.active) {
+                    background-color: rgba(var(--background-dark-rgb), $alpha: 0.05);
+                }
+
+                transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+                &.active {
+                    color: var(--foreground-dark-hex);
+                }
+            }
+            
+        }
+
+        > .indicator {
+
+            z-index: 0;
+
+            position: absolute;
+                
+            border-radius: 12px;
+            width: var(--width);
+            height: var(--height);
+
+            background-color: var(--background-white-hex);
+        }
+    }
+
+    &.big {
+
+        width: 100%;
+
+        > ol {
+            width: 100%;
+            --height: 40px;
+
+            border-radius: 12px;
+
+            > li {
+                flex-grow: 1;
+                > button {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+            }
+            > div {
+                border-radius: 8px;
+                width: calc(50% - 6px);
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+
+    &.success {
+        background-color: var(--success-light-hex);
+        color: var(--success-dark-hex);
+    }
+
+    &.info {
+        background-color: var(--info-light-hex);
+        color: var(--info-dark-hex);
+    }
+
+    &.error {
+        background-color: var(--danger-light-hex);
+        color: var(--danger-dark-hex);
+    }
+
+    &.warning {
+        background-color: var(--warning-light-hex);
+        color: var(--warning-dark-hex);
+    }
+
+    &.dark {
+        background-color: var(--background-dark-hex);
+        color: var(--foreground-light-hex);
+    }
+
+    &.default {
+        background-color: var(--background-light-hex);
+        color: var(--foreground-dark-hex);
+    }
+}
